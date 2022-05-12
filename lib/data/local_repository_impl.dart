@@ -28,15 +28,11 @@ class LocalRepositoryImpl extends LocalRepositoryInterface{
     mainUsers.addAll(_mainUserBox.getAll());
     try {
       userAux = mainUsers.firstWhere((element) => element.email==mainUser.email);
-      mainUser = userAux;
     }on StateError catch (e) {
-      _mainUserBox.put(mainUser);
+      int mainUserId = _mainUserBox.put(mainUser);
+      userAux = _mainUserBox.get(mainUserId);
     }
     return userAux!;
-  }
-
-  saveMainUser(MainUser mainUser){
-    _mainUserBox.put(mainUser);
   }
 
   @override
