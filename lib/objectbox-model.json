@@ -1,0 +1,146 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7452155893532754365",
+      "lastPropertyId": "7:1602761802832693913",
+      "name": "Customer",
+      "properties": [
+        {
+          "id": "1:1202185986692136758",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:183880289068052241",
+          "name": "document",
+          "type": 6
+        },
+        {
+          "id": "3:7577184776616031286",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:1582741699945871820",
+          "name": "secondName",
+          "type": 9
+        },
+        {
+          "id": "5:433883085411015967",
+          "name": "lastName",
+          "type": 9
+        },
+        {
+          "id": "6:843260814793102117",
+          "name": "secondLastName",
+          "type": 9
+        },
+        {
+          "id": "7:1602761802832693913",
+          "name": "mainUserId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:2950744471385361833",
+          "relationTarget": "MainUser"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:1276067715415605972",
+      "lastPropertyId": "3:8397830154757628157",
+      "name": "CustomerPhone",
+      "properties": [
+        {
+          "id": "1:2817331907104854122",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1585758854595851277",
+          "name": "phone",
+          "type": 6
+        },
+        {
+          "id": "3:8397830154757628157",
+          "name": "customerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:4668157139264147383",
+          "relationTarget": "Customer"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:4299669360544208846",
+      "lastPropertyId": "3:4266056778051401776",
+      "name": "Log",
+      "properties": [
+        {
+          "id": "1:3095867962913000796",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7215137307291534939",
+          "name": "logDate",
+          "type": 9
+        },
+        {
+          "id": "3:4266056778051401776",
+          "name": "logDescription",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:8948483984333740856",
+      "lastPropertyId": "3:6196844861816979206",
+      "name": "MainUser",
+      "properties": [
+        {
+          "id": "1:1748118620824885533",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3065505105718828965",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "3:6196844861816979206",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:4900599383283849308",
+          "name": "customers",
+          "targetId": "1:7452155893532754365"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "4:8948483984333740856",
+  "lastIndexId": "2:4668157139264147383",
+  "lastRelationId": "1:4900599383283849308",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
